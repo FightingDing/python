@@ -2,10 +2,11 @@
 # 百度新聞
 
 import json
-import re
+
 import requests
-from requests import RequestException
+
 from lxml import etree
+from requests import RequestException
 
 
 def get_page(url):
