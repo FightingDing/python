@@ -20,7 +20,7 @@ def send_welcome(message):
 
 @bot.message_handler()
 def echo(message):
-    print(message.from_user.username + ':' + message.text)
+    # print(message.from_user.username + ':' + message.text)
     text = get_tuling_response(message.from_user.username, message.text)
     text = text.replace('{br}', '\n')
 
