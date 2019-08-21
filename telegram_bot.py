@@ -1,5 +1,6 @@
 import requests
 import telebot
+import time
 
 from config import TOKEN
 
@@ -40,5 +41,13 @@ def get_tuling_response(userid, _info):
     return res['content']
 
 
+def run():
+    try:
+        bot.polling()
+    except BaseException:
+        time.sleep(5)
+        run()
+
+
 if __name__ == '__main__':
-    bot.polling()
+    run()
